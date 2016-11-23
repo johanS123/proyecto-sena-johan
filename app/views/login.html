@@ -1,0 +1,22 @@
+<div class="u-absolute-center">
+  <form ng-submit="login.perform()" novalidate>
+    <h1 ng-bind="login.password"></h1>
+
+    <div class="input-group">
+      <label for="email">Correo electrónico:</label>
+      <input ng-model="login.email" type="email" id="email">
+    </div>
+
+    <div class="input-group">
+      <label for="password">Contraseña:</label>
+      <input ng-model="login.password" type="password" id="password">
+    </div>
+
+    <a href="/recover-password">Recuperar contraseña</a>
+    <button type="submit">Iniciar sesión</button>
+  </form>
+
+  <div ng-show="login.authError">
+    <strong>Usuario y/o contraseña incorrecto(s)</strong>
+  </div>
+</div>

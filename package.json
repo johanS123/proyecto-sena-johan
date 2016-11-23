@@ -1,0 +1,24 @@
+{
+  "name": "proyecto-final",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "./node_modules/.bin/browserify app/index.js > assets/app.js -t [ babelify --presets [ es2015 ] ]",
+    "stylus": "./node_modules/.bin/stylus -w stylus/index.styl -o assets/styles.css",
+    "server": "./node_modules/.bin/browser-sync start -s -f=**/**.*"
+  },
+  "author": "Johan Rodriguez",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.2",
+    "browserify": "^13.1.1"
+  }
+}
